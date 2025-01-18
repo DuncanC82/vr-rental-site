@@ -167,43 +167,53 @@
   </section>
 
   <!-- BOOKING SECTION -->
-  <section id="booking" class="booking">
-    <h2>Book Your VR Event</h2>
-    <p class="section-intro">Ready to get started? Please fill out the form below, and we’ll be in touch with a personalized quote.</p>
-    <form id="bookingForm" class="booking-form">
-      <div class="form-group">
-        <label for="fullName">Full Name <span>*</span></label>
-        <input type="text" id="fullName" name="fullName" required />
-      </div>
-      <div class="form-group">
-        <label for="email">Email <span>*</span></label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone <span>*</span></label>
-        <input type="tel" id="phone" name="phone" required />
-      </div>
-      <div class="form-group">
-        <label for="package">Preferred Package</label>
-        <select id="package" name="package">
-          <option value="Basic">Basic Package</option>
-          <option value="Standard">Standard Package</option>
-          <option value="Premium">Premium Package</option>
-          <option value="Custom">Custom Experience</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="date">Event Date</label>
-        <input type="date" id="date" name="date" />
-      </div>
-      <div class="form-group">
-        <label for="message">Additional Details</label>
-        <textarea id="message" name="message" rows="4"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit Request</button>
-    </form>
-    <div id="formMessage" class="form-message"></div>
-  </section>
+<section id="booking" class="booking">
+  <h2>Book Your VR Event</h2>
+  <p class="section-intro">Ready to get started? Please fill out the form below, and we’ll be in touch with a personalized quote.</p>
+  
+  <form name="contact" netlify>
+    
+    <div class="form-group">
+      <label for="fullName">Full Name <span>*</span></label>
+      <input type="text" id="fullName" name="fullName" required />
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email <span>*</span></label>
+      <input type="email" id="email" name="email" required />
+    </div>
+    
+    <div class="form-group">
+      <label for="phone">Phone <span>*</span></label>
+      <input type="tel" id="phone" name="phone" required />
+    </div>
+    
+    <div class="form-group">
+      <label for="package">Preferred Package</label>
+      <select id="package" name="package">
+        <option value="Basic">Basic Package</option>
+        <option value="Standard">Standard Package</option>
+        <option value="Premium">Premium Package</option>
+        <option value="Custom">Custom Experience</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="date">Event Date</label>
+      <input type="date" id="date" name="date" />
+    </div>
+    
+    <div class="form-group">
+      <label for="message">Additional Details</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit Request</button>
+  </form>
+  
+  <div id="formMessage" class="form-message"></div>
+</section>
+
 
   <!-- FAQ SECTION -->
   <section id="faq" class="faq">
