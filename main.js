@@ -1,22 +1,66 @@
 document.addEventListener("DOMContentLoaded", () => {
   const bookingForm = document.getElementById("bookingForm");
-  const formMessage = document.getElementById("formMessage");
 
-  bookingForm.addEventListener("submit", (event) => {
-    // Prevent form submission if validation fails
-    const fullName = document.getElementById("fullName").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
+  // Listen for form submission
+  bookingForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    // Collect form data
+    const formData = new FormData(bookingForm);
 
     // Basic validation
-    if (!fullName || !email || !phone) {
-      event.preventDefault(); // Stop submission
-      formMessage.textContent = "Please fill in your name, email, and phone number.";
-      formMessage.style.color = "red";
+    if (!formData.get("fullName") || !formData.get("email") || !formData.get("phone")) {
+      showToast("Please fill in your name, email, and phone number.", 4000);
       return;
     }
 
-    // Optional: You can still log data for debugging
-    console.log("Form is valid, proceeding to submission...");
+    try {
+      // Send the POST request to Netlify (the site itself, "/")
+      const response = await fetch("/", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        // Show success toast
+        showToast("Thank you! Your booking request has been received.", 4000);
+
+        // Optionally clear the form
+        bookingForm.reset();
+
+        // If you want to redirect after showing toast, uncomment:
+        // setTimeout(() => {
+        //   window.location.href = "/thank-you.html";
+        // }, 2000);
+
+      } else {
+        showToast("Oops! Something went wrong. Please try again.", 4000);
+      }
+    } catch (error) {
+      console.error(error);
+      showToast("Error submitting form. Please try again later.", 4000);
+    }
   });
 });
+
+/**
+ * Display a toast notification
+ * @param {string} message - Toast message
+ * @param {number} duration - Time in ms before toast disappears
+ */
+function showToast(message, duration = 4000) {
+  const toastContainer = document.getElementById("toast-container");
+
+  // Create toast element
+  const toast = document.createElement("div");
+  toast.classList.add("toast");
+  toast.textContent = message;
+
+  // Append to container
+  toastContainer.appendChild(toast);
+
+  // Remove toast after the specified duration
+  setTimeout(() => {
+    toast.remove();
+  }, duration);
+}
