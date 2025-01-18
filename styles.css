@@ -1,0 +1,330 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f5f5f5;
+  }
+  
+  /* Links & Buttons */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  .btn-primary {
+    background-color: #ff4081;
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background-color: #e73370;
+  }
+  .btn-secondary {
+    background-color: #333;
+    color: #fff;
+  }
+  .btn-secondary:hover {
+    background-color: #555;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+  }
+  .logo a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .nav-menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+  }
+  .nav-menu ul li a {
+    color: #fff;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.75rem;
+  }
+  .nav-menu ul li a:hover {
+    background-color: #333;
+    border-radius: 4px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 70vh;
+    background: url('https://via.placeholder.com/1600x900?text=VR+Rental+Hero') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-overlay {
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .hero-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Sections */
+  section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+  }
+  section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0.5rem auto 2rem;
+  }
+  
+  /* Packages */
+  .packages {
+    background-color: #fdfdfd;
+  }
+  .package-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .package-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    flex: 1 1 300px;
+    max-width: 300px;
+    padding: 2rem;
+    text-align: center;
+  }
+  .package-card h3 {
+    margin-bottom: 1rem;
+  }
+  .package-card ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  .package-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Services */
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .service-item {
+    background-color: #fafafa;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-align: center;
+  }
+  .service-item img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  .service-item h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* How It Works */
+  .how-it-works .steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+  .step {
+    flex: 1 1 200px;
+    max-width: 250px;
+    text-align: center;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1.5rem;
+    position: relative;
+  }
+  .step-number {
+    display: inline-block;
+    background-color: #ff4081;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Custom VR */
+  .custom-vr ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Testimonials */
+  .testimonials {
+    background-color: #fdfdfd;
+  }
+  .testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .testimonial-card {
+    flex: 1 1 300px;
+    max-width: 400px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1.5rem;
+    font-style: italic;
+    position: relative;
+  }
+  .testimonial-card p {
+    margin-bottom: 1rem;
+  }
+  .testimonial-card h4 {
+    font-size: 1rem;
+    font-style: normal;
+    color: #666;
+  }
+  
+  /* Booking Form */
+  .booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 2rem;
+  }
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .form-group label span {
+    color: red;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font: inherit;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Form Message */
+  .form-message {
+    margin-top: 1rem;
+    text-align: center;
+    color: green;
+    font-weight: bold;
+  }
+  
+  /* FAQ */
+  .faq-item {
+    margin-bottom: 1.5rem;
+  }
+  .faq-item h4 {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Contact */
+  .contact {
+    text-align: center;
+  }
+  .contact p {
+    margin-top: 1rem;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    background-color: #111;
+    color: #fff;
+    padding: 1rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+    .nav-menu ul {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .how-it-works .steps {
+      flex-direction: column;
+      align-items: center;
+    }
+    .step {
+      max-width: 100%;
+    }
+    .testimonial-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
