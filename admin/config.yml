@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main  # or "master" or whatever your default branch is
+
+# Where uploaded images go in your repo
+media_folder: "images/uploads"     
+# Public URL for uploaded images
+public_folder: "/images/uploads"
+
+# Our collections: the types of content we want to edit
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "index.html"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - {
+              label: "Hero Image",
+              name: "hero_image",
+              widget: "image",
+              hint: "Upload or select a hero image"
+            }
+          # You can define more fields for other sections
