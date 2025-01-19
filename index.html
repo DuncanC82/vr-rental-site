@@ -43,7 +43,6 @@
     <h2>Our VR Packages</h2>
     <p class="section-intro">Choose the perfect package for your next event. We offer everything from basic rentals to full-scale VR setups with on-site support.</p>
     <div class="package-cards">
-      <!-- BASIC PACKAGE -->
       <div class="package-card">
         <h3>Basic VR Package</h3>
         <ul>
@@ -56,7 +55,6 @@
         <img src="./images/image (1).jpg" alt="Basic Package Image" />
         <a href="#booking" class="btn btn-secondary">Get a Quote</a>
       </div>
-      <!-- STANDARD PACKAGE -->
       <div class="package-card">
         <h3>Standard VR Package</h3>
         <ul>
@@ -69,7 +67,6 @@
         <img src="./images/image (2).jpg" alt="Standard Package Image" />
         <a href="#booking" class="btn btn-secondary">Get a Quote</a>
       </div>
-      <!-- PREMIUM PACKAGE -->
       <div class="package-card">
         <h3>Premium VR Package</h3>
         <ul>
@@ -90,22 +87,22 @@
     <h2>What We Do</h2>
     <div class="services-list">
       <div class="service-item">
-        <img src="image (4).jpg" alt="Party Service" />
+        <img src="./images/image (4).jpg" alt="Party Service" />
         <h3>Parties & Celebrations</h3>
         <p>Birthday parties, graduations, and private events become unforgettable with immersive VR gaming and experiences.</p>
       </div>
       <div class="service-item">
-        <img src="image (1).jpg" alt="Corporate Events" />
+        <img src="./images/image (1).jpg" alt="Corporate Events" />
         <h3>Corporate Events</h3>
         <p>Boost employee engagement and wow guests at product launches, team-building retreats, and office parties.</p>
       </div>
       <div class="service-item">
-        <img src="conference.jpg" alt="Conference Service" />
+        <img src="./images/image (2).jpg" alt="Conference Service" />
         <h3>Conferences & Exhibitions</h3>
         <p>Demonstrate your latest product or concept through interactive VR simulations that attract and engage audiences.</p>
       </div>
       <div class="service-item">
-        <img src="image (3).jpg" alt="Customized VR" />
+        <img src="./images/image (3).jpg" alt="Customized VR" />
         <h3>Custom Applications</h3>
         <p>Need specialized training or a unique experience? Our in-house development team can craft the perfect VR solution.</p>
       </div>
@@ -155,6 +152,69 @@
         <p>“Kids and adults loved the VR setups at my son’s birthday party. The staff took care of everything, making it stress-free for me.”</p>
         <h4>— Maria R., Private Event</h4>
       </div>
+    </div>
+  </section>
+
+  <!-- BOOKING SECTION -->
+  <section id="booking" class="booking">
+    <h2>Book Your VR Event</h2>
+    <p class="section-intro">Ready to get started? Please fill out the form below, and we’ll be in touch with a personalized quote.</p>
+    <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <!-- Honeypot Field -->
+      <input type="hidden" name="bot-field" />
+      <input type="hidden" name="form-name" value="booking" />
+
+      <div class="form-group">
+        <label for="fullName">Full Name <span>*</span></label>
+        <input type="text" id="fullName" name="fullName" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email <span>*</span></label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone <span>*</span></label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+      <div class="form-group">
+        <label for="package">Preferred Package</label>
+        <select id="package" name="package">
+          <option value="Basic">Basic Package</option>
+          <option value="Standard">Standard Package</option>
+          <option value="Premium">Premium Package</option>
+          <option value="Custom">Custom Experience</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date">Event Date</label>
+        <input type="date" id="date" name="date" />
+      </div>
+      <div class="form-group">
+        <label for="message">Additional Details</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Request</button>
+    </form>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h4>What is included in the rental?</h4>
+      <p>All necessary headsets, controllers, accessories, and (when selected) on-site support staff. We can also provide additional gear like VR-ready computers or monitors upon request.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How far in advance should I book?</h4>
+      <p>We recommend booking at least 2–3 weeks in advance to secure your desired date and ensure proper staffing and equipment availability.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do I need a large space for VR?</h4>
+      <p>We can tailor the VR setup to your available space. For room-scale setups, a 6’x6’ area per headset is ideal. We’ll guide you on space requirements after discussing your event.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What if I want a custom VR experience?</h4>
+      <p>We have an in-house development team that can build personalized VR content, from branded mini-games to detailed product demos. Just select “Custom Experience” in your booking form.</p>
     </div>
   </section>
 
